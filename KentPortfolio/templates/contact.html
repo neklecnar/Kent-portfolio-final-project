@@ -1,0 +1,35 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{% static 'contactstyle.css'%}">
+</head>
+
+<body id="background"style="background-image:url('{% static 'background.jpg' %}');">
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="navbar">
+                <a href="{% url 'base'%}">HOME</a>
+                <a href="{% url 'about'%}">ABOUT</a>
+                <a href="{% url 'portfolio'%}">PORTFOLIO</a>
+                <a href="{% url 'contact'%}">CONTACT</a>
+            </div>
+        </div>
+
+        <div class="contact-box">
+            <form action="" method="POST">
+                {% csrf_token %}
+            <input type="text" class="input-field" placeholder="Your Name" name="fname">
+            <input type="email" class="input-field" placeholder="Your Email" name="email">
+            <textarea type="text" class="input-field textarea-field" placeholder="Your message" name="message"></textarea>
+            <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>

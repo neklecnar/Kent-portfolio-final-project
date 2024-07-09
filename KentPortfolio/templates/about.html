@@ -1,0 +1,36 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css'%}">
+</head>
+
+<body id="background"style="background-image:url('{% static 'background.jpg' %}');">
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="navbar">
+                <a href="{% url 'base'%}">HOME</a>
+                <a href="{% url 'about'%}">ABOUT</a>
+                <a href="{% url 'portfolio'%}">PORTFOLIO</a>
+                <a href="{% url 'contact'%}">CONTACT</a>
+            </div>
+        </div>
+    </div>
+    <div class="container1">
+      <div class="flex-2">
+        <div class="content">
+            <h1>About Us</h1>
+            <h2>Hello my name is Kent Rancel Wenceslao from Laguna</h2>
+            <p> if you dont know about me i love dogs and my hobby is playing games</p>
+        </div>
+        <div class="image">
+        <img src="{% static 'kent.jpg' %}">
+        </div>
+       </div>
+    </div>
+
+</body>
+</html>
